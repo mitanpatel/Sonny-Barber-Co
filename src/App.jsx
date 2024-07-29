@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const address = "493 Barlow Moor Road, Chorlton-Cum-Hardy, Manchester, M21 8AG";
+  const encodedAddress = encodeURIComponent(address);
+  const mapsUrl = `https://maps.app.goo.gl/SwR52d37pAdWe6MB7`;
+
+
   return (
     <div className="App">
       <div className="button-container">
@@ -33,6 +38,11 @@ function App() {
           </svg>
         </a>
       </div>
+      <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="address">
+        <p>493 Barlow Moor Road</p>
+        <p>Chorlton-Cum-Hardy</p>
+        <p>Manchester, M21 8AG</p>
+      </a>
     </div>
   );
 }

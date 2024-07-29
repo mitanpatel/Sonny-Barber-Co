@@ -1,54 +1,91 @@
-.App {
-  background-image: url('public/Background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 2rem;
-  box-sizing: border-box;
-  margin: 0;
-  overflow: hidden;
-}
+  .App {
+    background-image: url('public/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Recoleta Alt', serif;;
+  }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
 
-.button-container {
-  display: flex;
-  justify-content: flex-start; /* Align buttons to the left */
-  align-items: flex-start;
-  width: 100%;
-}
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
 
-.icon-button {
-  background-color: transparent;
+  .icon-button {
+    background-color: transparent;
+    color: white;
+    width: 20px;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 5px;
+  }
+
+  .icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .instagram-button {
+    /* No specific styles */
+  }
+
+  .book-button {
+    /* No specific styles */
+  }
+
+.address {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 16px;
   color: white;
-
-  width: 20px; /* Size for better visibility */
-  height: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-right: 5px; /* Reduced space between buttons */
+  text-align: left;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-.icon-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.address:hover {
+  opacity: 0.8;
 }
 
-.instagram-button {
-  /* No need for specific margin */
+@font-face {
+  font-family: 'Recoleta Alt';
+  src: url('./fonts/RecoletaAlt-Regular.woff2') format('woff2'),
+       url('./fonts/RecoletaAlt-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.address p {
+  margin: 0;
 }
 
-.book-button {
-  /* No need for specific margin */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 0.5em;
+  line-height: 1.;
 }
