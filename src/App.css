@@ -1,5 +1,5 @@
 .App {
-  background-image: url('Background.png');
+  background-image: url('public/Background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ body, html {
   color: white;
 
   width: 20px; /* Size for better visibility */
-  height: 20px;
+  height: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
