@@ -1,17 +1,23 @@
-## Running React on Replit
+# Sonny Barber Company Website
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+A modern, responsive single-page website for Sonny Barber Company, featuring a dynamic background that adapts to desktop and mobile views.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+## Features
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+- Responsive design with different layouts for desktop and mobile
+- Dynamic background (static image for desktop, video for mobile)
+- Direct booking integration with Booksy
+- Instagram social link
+- Interactive Google Maps location link
+- Modern, clean UI with smooth transitions
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
+## Tech Stack
 
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
+- React 18
+- Vite
+- CSS3 with Media Queries
+- Netlify for hosting
 
-### Typescript
+## Local Development
 
-Just rename any file from `.jsx` to `.tsx`. You can also try our [TypeScript Template](https://replit.com/@replit/React-TypeScript)
+1. Clone the repository:

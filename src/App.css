@@ -1,81 +1,83 @@
-  .App {
-    background-image: url('public/Background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem;
-    box-sizing: border-box;
-    margin: 0;
-    overflow: hidden;
-    font-family: 'Recoleta Alt', serif;;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;500&display=swap');
 
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-  }
+.App {
+  background-image: url('../assets/images/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
 
-  .button-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 
-  .icon-button {
-    background-color: transparent;
-    color: white;
-    width: 20px;
-    height: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-right: 5px;
-  }
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 12px 0 12px 12px;
+}
 
-  .icon-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
+.icon-button {
+  background-color: transparent;
+  color: white;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+  padding: 6px;
+  border-radius: 4px;
+}
 
-  .instagram-button {
-    /* No specific styles */
-  }
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
-  .book-button {
-    /* No specific styles */
-  }
+.instagram-button {
+  /* No specific styles */
+}
+
+.book-button {
+  /* No specific styles */
+}
 
 .address {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  font-size: 16px;
+  font-size: 24px;
   color: white;
   text-align: left;
   text-decoration: none;
   transition: opacity 0.3s ease;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .address:hover {
   opacity: 0.8;
 }
 
-@font-face {
-  font-family: 'Recoleta Alt';
-  src: url('./fonts/RecoletaAlt-Regular.woff2') format('woff2'),
-       url('./fonts/RecoletaAlt-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 .address p {
   margin: 0;
 }
@@ -88,4 +90,78 @@ h1 {
 p {
   font-size: 0.5em;
   line-height: 1.;
+}
+
+@media (min-width: 768px) {
+  .App {
+    background-image: url('../assets/images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .background-video {
+    display: none;
+  }
+
+  .button-container {
+    justify-content: flex-start;
+    padding: 12px 0 12px 12px;
+  }
+
+  .address {
+    font-size: 28px;
+    left: 25px;
+    bottom: 25px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .App {
+    background-image: none;
+  }
+
+  .background-video {
+    display: block;
+  }
+
+  .button-container {
+    justify-content: flex-end;
+    padding: 12px 12px 12px 0;
+  }
+
+  .icon-button {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .address {
+    font-size: 22px;
+    left: 15px;
+    bottom: 15px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Video background styles (for mobile) */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  .App {
+    background-image: none; /* Remove static background on mobile */
+  }
+
+  .background-video {
+    display: block; /* Ensure video is displayed on mobile */
+  }
 }
